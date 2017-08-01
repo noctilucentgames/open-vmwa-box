@@ -1,5 +1,5 @@
 const BOX = 151916
-module.exports = function openBox(dispatch){
+module.exports = function openVmwaBox(dispatch){
 
     const ploc = new (require('../../cat_utils/playerLocation.js'))(dispatch)
     const item = new (require('../../cat_utils/useItem.js'))(dispatch, ploc)
@@ -61,10 +61,4 @@ module.exports = function openBox(dispatch){
             dispatch.toServer('C_GACHA_TRY', 1, {id: id})
         })
     }
-
-
-    // use item
-    // gacha start > gacha try
-    // gacha end > use item etc
-    // gacha cancel -> hook to stop loop && use when out of boxes
 }
