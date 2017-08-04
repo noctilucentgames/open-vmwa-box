@@ -1,11 +1,11 @@
 const BOX = 151916
 module.exports = function openVmwaBox(dispatch){
 
-    const ploc = new (require('../../cat_utils/playerLocation.js'))(dispatch)
-    const item = new (require('../../cat_utils/useItem.js'))(dispatch, ploc)
-    const inv = new (require('../../cat_utils/inventory.js'))(dispatch)
-    const msg = new (require('../../cat_utils/message.js'))(dispatch, 'openBox', '#3f7ebd')
-    const chat = new (require('../../cat_utils/chatCommands.js'))(dispatch)
+    const ploc = new (require('./lib/playerLocation.js'))(dispatch)
+    const item = new (require('./lib/cat_utils/useItem.js'))(dispatch, ploc)
+    const inv = new (require('./lib/cat_utils/inventory.js'))(dispatch)
+    const msg = new (require('./lib/cat_utils/message.js'))(dispatch, 'openBox', '#3f7ebd')
+    const chat = new (require('./lib/cat_utils/chatCommands.js'))(dispatch)
     chat.add('open', open)
 
     var count = 0;
