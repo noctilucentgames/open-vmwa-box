@@ -18,7 +18,7 @@ module.exports = function openVmwaBox(dispatch){
         if (count > 0){
             useBox()
             .then(tryGacha)
-            .then(() => {openBox()})
+            .then(openBox)
             .catch(e => msg.error(e.message))
         } else {
             msg.message('You\'re out of boxes')
